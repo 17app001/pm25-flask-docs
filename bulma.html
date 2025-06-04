@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
+
+<body>
+  <section class="hero is-fullheight is-info">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-centered is-vcentered">
+          <!-- 左邊：ICON區塊 -->
+          <div class="column is-3 has-text-centered">
+            <figure class="image is-128x128 is-inline-block">
+              <img src="images/person.png" alt="Icon">
+            </figure>
+            <p class="title is-4 has-text-warning">Guest</p>
+          </div>
+          <div class="column is-half">
+            <h1 class="title has-text-centered">Login</h1>
+            <div class="box">
+              <form action="/login" method="POST">
+                <div class="field">
+                  <label class="label" for="username">Username</label>
+                  <div class="control">
+                    <input class="input has-text-centered" type="text" id="username" name="username"
+                      placeholder="Enter your username">
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="label" for="password">Password</label>
+                  <div class="control">
+                    <input class="input has-text-centered" type="password" id="password" name="password"
+                      placeholder="Enter your password">
+                  </div>
+                </div>
+                <div class="field has-text-centered">
+                  <div class="control">
+                    <button class="button is-link" type="submit">Login</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="columns is-centered is-vcentered">
+          <!-- 左邊：ICON區塊 -->
+          <div class="column is-3 has-text-centered">
+            <figure class="image is-128x128 is-inline-block">
+              <img src="images/person.png" alt="Icon">
+            </figure>
+            <p class="title is-4 has-text-warning">Guest</p>
+          </div>
+          <div class="column is-half">
+            <h1 class="title has-text-centered has-text-primary">Register</h1>
+            <div class="box">
+              <form action="/login" method="POST">
+                <div class="field">
+                  <label class="label" for="username">Username</label>
+                  <div class="control">
+                    <input class="input has-text-centered" type="text" id="username" name="username"
+                      placeholder="Enter your username">
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="label" for="password">Password</label>
+                  <div class="control">
+                    <input class="input has-text-centered" type="password" id="password" name="password"
+                      placeholder="Enter your password">
+                  </div>
+                </div>
+                <div class="field has-text-centered">
+                  <div class="control">
+                    <button class="button is-link" type="submit">Login</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const burger = document.querySelector('.navbar-burger');
+      const menu = document.querySelector('#navMenu');
+
+      burger.addEventListener('click', () => {
+        burger.classList.toggle('is-active');
+        menu.classList.toggle('is-active');
+      });
+    });
+  </script>
+</body>
+
+</html>
