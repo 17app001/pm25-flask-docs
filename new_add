@@ -1,0 +1,38 @@
+步驟補遺
+
+1.先產生.env 置換aiven資料庫
+
+2.安裝dotenv
+
+3.修改opendb
+
+4.新增資料表pm25(可用mysql workbench)
+
+5.置換template
+
+6.產生虛擬環境
+
+7.安裝套件 flask pandas pymysql dotenv gunicron 
+
+8.gitignore 新增.env .vnev
+
+9.pip freeze > requirements.txt
+
+10.修改 app.run(debug=False)
+
+11.render Start Command => gunicorn app:app
+
+12.Environment Variables => 新增.env資訊
+
+13.新增自動化工作流
+cron: '30 15 * * 1' 
+分鐘	30	第 30 分鐘
+小時	15	UTC 15 點（台灣時間 23 點）
+每月幾號	*	每天都執行
+月份	*	每月都執行
+星期幾	*	不限星期幾（每天都執行）
+
+14.將UTC 時間+8 
+nowtime = (datetime.now() + timedelta(hours=8)).strftime("%Y-%m-%d %H:%M:%S")
+   
+
